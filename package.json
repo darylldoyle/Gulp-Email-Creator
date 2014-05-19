@@ -1,6 +1,6 @@
 {
   "name": "Gulp-Email-Creator",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "A gulp workflow for easing the creation of HTML emails",
   "main": "gulpfile.js",
   "scripts": {
