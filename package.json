@@ -1,0 +1,26 @@
+{
+  "name": "Gulp-Email-Creator",
+  "version": "0.0.1",
+  "description": "A gulp workflow for easing the creation of HTML emails",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "gulp"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/darylldoyle/Gulp-Email-Creator.git"
+  },
+  "keywords": [
+    "GulpJS",
+    "Email"
+  ],
+  "author": "Daryll Doyle",
+  "license": "apache2",
+  "bugs": {
+    "url": "https://github.com/darylldoyle/Gulp-Email-Creator/issues"
+  },
+  "homepage": "https://github.com/darylldoyle/Gulp-Email-Creator",
+  "devDependencies": {
+    "gulp": "^3.6.2"
+  }
+}
