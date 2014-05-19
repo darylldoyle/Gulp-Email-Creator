@@ -1,0 +1,32 @@
+html, body {
+  background: #CCC; }
+
+table {
+  border-spacing: 0; }
+
+.wrapper {
+  background: #FFF;
+  max-width: 550px;
+  margin: 0 auto;
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif; }
+  .wrapper a {
+    color: #E82C0C;
+    text-decoration: none; }
+    .wrapper a:hover {
+      text-decoration: underline; }
+  .wrapper img {
+    max-width: 100%; }
+  .wrapper .headerText {
+    color: #000; }
+    .wrapper .headerText p {
+      margin: 2px;
+      font-size: 12px;
+      font-size: 0.75rem; }
+  .wrapper .mainBody > td > table {
+    padding: 0 20px; }
+    .wrapper .mainBody > td > table td {
+      vertical-align: top;
+      width: 30%; }
+      .wrapper .mainBody > td > table td:first-child {
+        padding-right: 20px;
+        width: 70%; }

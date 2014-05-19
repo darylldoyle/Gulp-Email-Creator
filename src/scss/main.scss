@@ -1,0 +1,52 @@
+@import "mixins";
+
+html, body {
+	background: #CCC;
+}
+
+table {
+	border-spacing: 0;
+}
+
+.wrapper {
+	background: #FFF;
+	max-width: 550px;
+	margin: 0 auto;
+	font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+
+	a {
+		color: #E82C0C;
+		text-decoration: none;
+
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+
+	img {
+		max-width: 100%;
+	}
+
+	.headerText {
+		color: #000;
+
+		p {
+			margin: 2px;
+			@include font-size(12px);
+		}
+	}
+
+	.mainBody > td > table {
+		padding: 0 20px;
+
+		td {
+			vertical-align: top;
+			width: 30%;
+
+			&:first-child {
+				padding-right: 20px;
+				width: 70%;
+			}
+		}
+	}
+}
