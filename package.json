@@ -21,6 +21,11 @@
   },
   "homepage": "https://github.com/darylldoyle/Gulp-Email-Creator",
   "devDependencies": {
-    "gulp": "^3.6.2"
+    "gulp": "^3.6.2",
+    "gulp-autoprefixer": "0.0.7",
+    "gulp-inline-css": "^0.2.5",
+    "gulp-livereload": "^1.5.0",
+    "gulp-sass": "^0.7.1",
+    "tiny-lr": "0.0.7"
   }
 }
