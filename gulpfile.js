@@ -15,8 +15,7 @@ gulp.task('sass', function() {
     return gulp.src('src/scss/*.scss')
     .pipe(sass({errLogToConsole: true}))
     .pipe(autoprefixer('last 2 version', 'safari 5', 'ie 8', 'ie 9', 'opera 12.1', 'ios 6', 'android 4'))
-    .pipe(gulp.dest('src/css'))
-    .pipe(livereload(server));
+    .pipe(gulp.dest('src/css'));
 });
 
 // Livereload
@@ -36,16 +35,15 @@ gulp.task('build', function() {
                 removeStyleTags: true,
                 removeLinkTags: true
         }))
-        .pipe(gulp.dest('output/'));
+        .pipe(gulp.dest('output/'))
+        .pipe(livereload(server));
 });
  
 // Watch Files For Changes
 gulp.task('watch', function() {
     gulp.watch('src/scss/*.scss', ['sass']);
-    gulp.watch(['src/scss/*.scss','src/html/*.html'], ['build']);
-    gulp.watch('output/*.html').on('change', function(file) {
-        livereload(server).changed(file.path);
-    });
+    gulp.watch('src/html/*.html', ['build']);
+    gulp.watch('src/css/*.css', ['build']);
 });
  
 // Default Task
