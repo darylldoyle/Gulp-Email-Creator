@@ -15,13 +15,19 @@ You can install it by cloning this repository to a local folder and running the 
 ```
 This will install all dependencies.
 
+If the install fails try running the install as root. For some reason browsersync seemed to fail for me unless installed as root.
+
+```javascript
+    sudo npm install
+```
+
 #Using the package#
 
 You can use the Gulp-Email-Creator workflow by creating your HTML in the `./src/html/` directory and your SCSS in the `./src/scss/` directory.
 
 Running `gulp` from the terminal will build the new HTML email template into the `./output/` directory and the proceed to watch `./src/html/` and `./src/scss/` for any updates.
 
-The gulpfile has livereload built in and will reload on any HTML or CSS edit, allowing you to focus on your code.
+The gulpfile has browsersync built in and will reload on any HTML or CSS edit, allowing you to focus on your code.
 
 #Testing#
 
