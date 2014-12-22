@@ -21,6 +21,9 @@ If the install fails try running the install as root. For some reason browsersyn
     sudo npm install
 ```
 
+This now uses [MailChimp's](http://mailchimp.com/) CSS inliner as I've found it to work better across browsers. You will now need a Mailchimp API key which you can add to the `config.json` file.
+You can get a Mailchimp API by creating one in your Mailchimp account. [Instructions Here](http://kb.mailchimp.com/accounts/management/about-api-keys)
+
 #Using the package#
 
 You can use the Gulp-Email-Creator workflow by creating your HTML in the `./src/html/` directory and your SCSS in the `./src/scss/` directory.
