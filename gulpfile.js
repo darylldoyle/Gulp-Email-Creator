@@ -4,9 +4,13 @@ var gulp = require('gulp');
 // Include Our Plugins
 var sass = require('gulp-sass');
 var autoprefixer = require('gulp-autoprefixer');
-var inlineCss = require('gulp-inline-css');
+var inline = require('gulp-mc-inline-css');
 var browserSync = require('browser-sync');
 var reload = browserSync.reload;
+var inlinesource = require('gulp-inline-source');
+
+// Include the config
+var config = require('./config.json');
 
 
 // Compile Our Sass
@@ -33,12 +37,8 @@ gulp.task('browser-sync', function() {
 // Build our templates
 gulp.task('build', function() {
     return gulp.src('src/html/*.html')
-        .pipe(inlineCss({
-                applyStyleTags: true,
-                applyLinkTags: true,
-                removeStyleTags: true,
-                removeLinkTags: true
-        }))
+        .pipe(inlinesource())
+        .pipe(inline(config.APIKEY))
         .pipe(gulp.dest('./output'))
         .pipe(reload({stream:true}));
 });
