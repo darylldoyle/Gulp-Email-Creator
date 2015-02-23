@@ -12,5 +12,7 @@
         "user": "SMTP User",
         "pass": "SMTP Password"
     }
-  }
+  },
+
+  "litmus": "Your Litmus static email address"
 }

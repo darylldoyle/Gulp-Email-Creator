@@ -42,11 +42,14 @@ To run this, you can use the following command
 gulp send --template="compiled-template-name.html"
 ```
 
-#Testing
+##Testing
 
-This package currently doesn't have any means of testing built in other than the ability to send to yourself.
+Thanks to the awesome guys over [Litmus](http://litmus.com/), we can now throw your emails straight into their tests. You'll need an active [Litmus](http://litmus.com/) account (well worth the money!) and to get your [static email](https://litmus.com/static-email). Plug this into the `config.json` file and then run the following command.
 
-I have tested using [Putsmail](http://putsmail.com/) But have also heard great things about [Litmus](http://litmus.com/)
+```javascript
+gulp litmus --template="compiled-template-name.html"
+```
+In a few seconds/minutes, you'll see the test appear in Limus for you!
 
 #Contributing#
 

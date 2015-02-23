@@ -11,6 +11,7 @@ var inlinesource = require('gulp-inline-source');
 var util = require('gulp-util');
 var nodemailer = require('nodemailer');
 var fs = require('fs');
+var html_strip = require('htmlstrip-native');
 
 // Include the config
 var config = require('./config.json');
@@ -58,9 +59,24 @@ gulp.task('default', ['sass', 'browser-sync', 'build', 'watch']);
 
 // Add ability to send test emails
 gulp.task('send', function () {
+    return sendEmail(util.env.template, config.testing.to);
+});
+
+gulp.task('litmus', function () {
+    return sendEmail(util.env.template, config.litmus);
+});
+
+function sendEmail(template, recipient) {
     try {
 
-        var templatePath = "./output/" + util.env.template;
+        var options = {
+            include_script : false,
+            include_style : false,
+            compact_whitespace : true,
+            include_attributes : { 'alt': true }
+        };
+
+        var templatePath = "./output/" + template;
 
         var transporter = nodemailer.createTransport({
             service: 'Mailgun',
@@ -70,12 +86,14 @@ gulp.task('send', function () {
             }
         });
 
+        var templateContent = fs.readFileSync(templatePath, encoding = "utf8");
 
         var mailOptions = {
             from: config.testing.from, // sender address
-            to: config.testing.to, // list of receivers
-            subject: config.testing.subject, // Subject line
-            html: fs.readFileSync(templatePath, encoding = "utf8") // html body
+            to: recipient, // list of receivers
+            subject: config.testing.subject + ' - ' + template, // Subject line
+            html: templateContent, // html body
+            text: html_strip.html_strip(templateContent, options)
         };
 
         transporter.sendMail(mailOptions, function(error, info){
@@ -95,4 +113,4 @@ gulp.task('send', function () {
             util.log(e);
         }
     }
-});
+}
