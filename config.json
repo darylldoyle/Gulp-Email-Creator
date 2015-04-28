@@ -9,8 +9,8 @@
 
   "auth": {
     "mailgun": {
-      "user": "SMTP User",
-      "pass": "SMTP Password"
+        "user": "SMTP User",
+        "pass": "SMTP Password"
     }
   },
 
