@@ -4,7 +4,7 @@ var gulp = require('gulp');
 // Include Our Plugins
 var sass = require('gulp-sass');
 var autoprefixer = require('gulp-autoprefixer');
-var inline = require('gulp-mc-inline-css');
+var inline = require('gulp-mc-inliner');
 var browserSync = require('browser-sync');
 var reload = browserSync.reload;
 var inlinesource = require('gulp-inline-source');
@@ -42,7 +42,7 @@ gulp.task('browser-sync', function() {
 gulp.task('build', function() {
     return gulp.src('src/html/*.html')
         .pipe(inlinesource())
-        .pipe(inline(config.APIKEY))
+        .pipe(inline(config.APIKEY, false))
         .pipe(gulp.dest('./output'))
         .pipe(reload({stream:true}));
 });
