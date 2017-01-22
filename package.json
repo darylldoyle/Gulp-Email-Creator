@@ -30,7 +30,7 @@
     "gulp-util": "^3.0.3",
     "htmlstrip-native": "^0.1.3",
     "mailchimp": "^1.1.0",
-    "nodemailer": "^2.6.4",
+    "nodemailer": "^2.7.2",
     "through2": "^2.0.1",
     "tiny-lr": "^1.0.1"
   }
