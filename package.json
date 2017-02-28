@@ -32,6 +32,6 @@
     "mailchimp": "^1.1.0",
     "nodemailer": "^3.1.4",
     "through2": "^2.0.3",
-    "tiny-lr": "^1.0.1"
+    "tiny-lr": "^1.0.3"
   }
 }
