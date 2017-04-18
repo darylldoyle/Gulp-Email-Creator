@@ -42,7 +42,7 @@ To run this, you can use the following command
 gulp send --template="compiled-template-name.html"
 ```
 
-##Testing
+## Testing
 
 Thanks to the awesome guys over [Litmus](http://litmus.com/), we can now throw your emails straight into their tests. You'll need an active [Litmus](http://litmus.com/) account (well worth the money!) and to get your [static email](https://litmus.com/static-email). Plug this into the `config.json` file and then run the following command.
 
@@ -51,6 +51,6 @@ gulp litmus --template="compiled-template-name.html"
 ```
 In a few seconds/minutes, you'll see the test appear in Limus for you!
 
-#Contributing#
+# Contributing #
 
 Any contributions will be happily recieved. Just open an issue or make a pull request.
