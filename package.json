@@ -23,7 +23,7 @@
   "devDependencies": {
     "browser-sync": "^2.18.8",
     "gulp": "^3.8.10",
-    "gulp-autoprefixer": "^3.1.1",
+    "gulp-autoprefixer": "^4.0.0",
     "gulp-inline-source": "^3.1.0",
     "gulp-mc-inliner": "0.0.4",
     "gulp-sass": "^3.1.0",
